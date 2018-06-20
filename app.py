@@ -41,7 +41,7 @@ mapbox_access_token = 'pk.eyJ1Ijoic2FpbnRseXZpIiwiYSI6ImNqZHZpNXkzcjFwejkyeHBkNn
 print('...loading load profile data...')
 #profiles = appProfiles(1994,2014) 
 #feather.write_dataframe(profiles, os.path.join(os.path.sep, 'Users', 'bbrand', "Desktop", "ERC", "buildup", "profiles.feather")) 
-profiles = pd.read_feather(os.path.join('profiles.feather'))
+#profiles = pd.read_feather(os.path.join('profiles.feather'))
 
 # Load datasets
 #print('...loading socio demographic data...')
@@ -58,7 +58,7 @@ loc_summary.rename(columns={'AnswerID':'# households'}, inplace=True)
 appliances = ['fridge freezer','geyser','heater','hotplate','iron','kettle','microwave','3 plate', '4 plate','tv','washing machine']
 #sd = features.socio_demographics(appliances)
 #feather.write_dataframe(sd, os.path.join(os.path.sep, 'Users', 'bbrand', "Desktop", "ERC", "buildup", "sd.feather")) 
-#sd = pd.read_feather(os.path.join('sd.feather'))
+sd = pd.read_feather(os.path.join('sd.feather'))
 
 print('Your app is starting now. Visit 127.0.0.1:8050 in your browser')
 

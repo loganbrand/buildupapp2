@@ -47,7 +47,7 @@ profiles = pd.read_feather(os.path.join('profiles.feather'))
 #print('...loading socio demographic data...')
 #ids = features.loadID()
 #feather.write_dataframe(ids, os.path.join(os.path.sep, 'Users', 'bbrand', "Desktop", "ERC", "buildup", "ids.feather")) 
-ids = pd.read_feather(os.path.join('ids.feather'))
+#ids = pd.read_feather(os.path.join('ids.feather'))
 
 #a little bit of data wrangling
 loc_summary = pd.pivot_table(ids, values = ['AnswerID'], index = ['Year','LocName','Lat','Long','Municipality','Province'],aggfunc = np.count_nonzero)
@@ -58,7 +58,7 @@ loc_summary.rename(columns={'AnswerID':'# households'}, inplace=True)
 appliances = ['fridge freezer','geyser','heater','hotplate','iron','kettle','microwave','3 plate', '4 plate','tv','washing machine']
 #sd = features.socio_demographics(appliances)
 #feather.write_dataframe(sd, os.path.join(os.path.sep, 'Users', 'bbrand', "Desktop", "ERC", "buildup", "sd.feather")) 
-sd = pd.read_feather(os.path.join('sd.feather'))
+#sd = pd.read_feather(os.path.join('sd.feather'))
 
 print('Your app is starting now. Visit 127.0.0.1:8050 in your browser')
 
